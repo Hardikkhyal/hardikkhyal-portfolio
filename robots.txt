@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://github.com/Hardikkhyal/hardikkhyal-portfolio/sitemap.xml
+Sitemap: https://hardikkhyal.github.io/hardikkhyal-portfolio/sitemap.xml
