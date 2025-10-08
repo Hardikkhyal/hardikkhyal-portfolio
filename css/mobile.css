@@ -1,0 +1,133 @@
+/* Mobile-specific tweaks extracted and improved */
+/* Default small-screen responsive rules */
+@media (max-width: 768px) {
+    .services-grid, .tools-grid, .work-examples-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .main-title {
+        font-size: 32px;
+    }
+
+    /* Reduce paddings on smaller screens to avoid horizontal overflow */
+    header {
+        padding: 14px 16px;
+    }
+
+    .container {
+        padding: 12px;
+    }
+
+    .main-content {
+        padding: 0 12px;
+    }
+
+    /* Make sidebar content flow nicely when stacked */
+    .sidebar {
+        align-items: center;
+    }
+
+    .profile-img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .header-icons {
+        gap: 8px;
+    }
+
+    .header-icons button {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    /* Hide long text button that causes overflow on very small screens */
+    .header-icons button:last-child {
+        display: none;
+    }
+
+    .about-section {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .menu-dots {
+        align-self: flex-start;
+    }
+
+    /* Show sidebar lists in 2 columns on most phones to use horizontal space */
+    .skill-section .list-grid,
+    .hobby-section .list-grid,
+    .edu-section .list-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Certifications often have long lines; keep single column for readability */
+    .cert-section .list-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .list-grid > * {
+        align-items: center;
+    }
+
+    /* Slightly reduce About text size on smaller screens */
+    .about-text {
+        font-size: 15px;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 28px;
+        margin: 28px 0;
+    }
+
+    .profile-img {
+        width: 110px;
+        height: 110px;
+    }
+
+    header .logo {
+        font-size: 12px;
+    }
+
+    .header-icons button {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+
+    .work-example-img {
+        height: 140px;
+    }
+
+    /* On very small phones collapse lists to single column for legibility */
+    .skill-section .list-grid,
+    .hobby-section .list-grid,
+    .edu-section .list-grid,
+    .cert-section .list-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-text {
+        font-size: 14px;
+    }
+}
+
+/* Prevent long/unbroken links from forcing horizontal scroll */
+.info-link {
+    overflow-wrap: anywhere;
+    max-width: 100%;
+}
+
+/* Safeguard: avoid accidental horizontal overflow from body */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}

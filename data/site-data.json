@@ -1,0 +1,13 @@
+{
+  "headerButtons": [
+    { "label": "🔍", "action": "search" },
+    { "label": "📋", "action": "clipboard" },
+    { "label": "💾", "action": "save" },
+    { "label": "⋯", "action": "more" },
+    { "label": "hardik", "action": "promo" }
+  ],
+  "contact": {
+    "email": "contact@hardikkhyal.com",
+    "phone": "+91 XXXXXXXXXX"
+  }
+}
